@@ -1,0 +1,311 @@
+/* =========================
+   ESTILOS GENERALES
+   ========================= */
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    color: #333;
+}
+    h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #3a2f2b;
+}
+h1 {
+    font-size: 2.2rem;
+}
+h2  {
+font-size: 1.6rem;
+}
+h3{
+   font-size: 1.2rem; 
+}
+
+
+/* =========================
+   HEADER Y NAVEGACIÓN
+   ========================= */
+
+.header {
+    background-color: #f5f2ef;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.header__logo{
+    margin: 0;
+}
+
+.header__nav{
+    margin-top: 10px;
+}
+.header__link {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.header__link:hover {
+    text-decoration: underline;
+}
+
+.header__link--active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* =========================
+   HEADER – TIPOGRAFÍA
+   ========================= */
+
+.header__logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    color: #3a2f2b;
+    letter-spacing: 0.5px;
+}
+
+.header p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #6b5a54;
+    font-family: 'Inter', sans-serif;
+}
+
+.header__link {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   SECCIONES GENERALES
+   ========================= */
+
+main {
+    padding: 40px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+section > h2 {
+    margin-bottom: 12px;
+}
+
+section > p {
+    margin-top: 0;
+}
+section:not(:last-child) {
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #8c6a5d;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    
+}
+
+.button:hover {
+    background-color: #725348;
+}
+.button {
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   TIENDA – shop.html
+   ========================= */
+
+.shop {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.shop__title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+}
+
+.shop__image {
+    width: 100%;
+    height: 140px;
+    background: #e9e2dc;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+
+.shop__product {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fafafa;
+}
+
+.shop__price {
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #3a2f2b;
+}
+
+.shop__price::before {
+    content: "Precio ";
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #6b5a54;
+    margin-right: 4px;
+}
+
+/* Ajuste contextual del botón en la tienda */
+.shop__button {
+    margin-top: 10px;
+    margin-left: 1px;
+}
+.shop__product {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shop__product:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.shop__product .button{
+    margin-top: auto;
+    width: auto;
+    text-align: center;
+}
+.shop__product .button {
+    border-radius: 0 0 6px 6px;
+}
+
+/* =========================
+   LISTA DE AROMAS
+   ========================= */
+
+.aromas-list {
+    columns: 2;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* =========================
+    FOOTER
+   ========================= */
+
+.footer {
+    background-color: #eee;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+} 
+.footer {
+    margin-top: 40px;
+}
+
+.footer__text {
+    margin: 0;
+}
+
+.footer__contact {
+    margin: 5px 0 0;
+    color: #555;
+}
+ 
+
+/* =========================
+   WHATSAPP FLOTANTE
+   ========================= */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow:  0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+/* =========================
+   MOBILE (pantallas pequeñas)
+   ========================= */
+
+@media (max-width: 600px) {
+    
+    .whatsapp-float{
+        width: calc(100% - 40px);
+        text-align: center;
+        right: 20px;
+        left: 2px;
+    }
+    .header__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .header__link {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .shop__button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header__logo {
+        font-size: 1.9rem;
+    }
+
+    .header p {
+        font-size: 0.9rem;
+    }
+        .aromas-list {
+        columns: 1;
+    }
+        .shop__product .button {
+        width: 100%;
+    }
+        .shop__price {
+        font-size: 1.3rem;
+    }
+
+}
