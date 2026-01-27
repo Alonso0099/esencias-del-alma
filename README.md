@@ -91,74 +91,95 @@ All orders and inquiries are handled directly via WhatsApp.
 
 ###### SPANISH VERSION
 
-# Esencias del Alma 🌿
+---
 
-Sitio web en construcción para **Esencias del Alma**, una marca de aromas artesanales enfocada en bienestar, relajación y experiencias sensoriales en Costa Rica.
+# Versión en Español
 
-El sitio está pensado como una **versión viva**, que irá evolucionando según feedback, contenido y necesidades del negocio.
+## Esencias del Alma 
+
+Sitio web en desarrollo para **Esencias del Alma**, una marca de aromas artesanales enfocada en el bienestar, la relajación y las experiencias sensoriales en Costa Rica.
+
+Este proyecto está planteado como un **prototipo vivo**, que evoluciona de forma iterativa según el feedback real, el contenido disponible y las necesidades del negocio.
 
 ---
 
-## 🌱 Estado del proyecto
+##  Estado del proyecto
 
-🟢 **Publicado y funcional (versión inicial)**  
-🔧 En desarrollo continuo
+ **Publicado y funcional (versión inicial)**  
+ En evolución continua
 
-Actualmente incluye:
+Páginas y funcionalidades actuales:
 - Página de inicio
-- Tienda de productos (pedido vía WhatsApp)
-- Sobre nosotros (Falta Historia)
-- Contacto(Falta poner medios de contacto)
+- Tienda de productos (pedidos gestionados vía WhatsApp)
+- Sobre nosotros
+- Contacto
 - Aviso de privacidad
 - Diseño responsive (desktop y mobile)
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+##  Tecnologías utilizadas
 
-- HTML5
-- CSS3 (Grid + Flexbox)
-- Git & GitHub
-- GitHub Pages (hosting)
+- **HTML5** para estructura semántica
+- **CSS3** usando Grid y Flexbox para el layout
+- **Git & GitHub** para control de versiones
+- **GitHub Pages** para despliegue y hosting
 
-No utiliza frameworks ni backend por el momento.
-
----
-
-## 📱 Funcionalidad principal
-
-- Visualización de productos
-- Botones de compra que redirigen a **WhatsApp Business**
-- Botón flotante de WhatsApp
-- Navegación clara y simple
+Por el momento no se utilizan frameworks ni backend.  
+El enfoque principal está en una estructura limpia, diseño responsive y facilidad de mantenimiento.
 
 ---
 
-## 🔜 Próximos pasos (pendientes)
+##  Funcionalidad principal
+
+- Tarjetas de producto con layout consistente
+- Botones de acción que redirigen a **WhatsApp Business**
+- Botón flotante de contacto por WhatsApp
+- Navegación simple y clara
+- Comportamiento responsive pensado desde mobile
+
+---
+
+##  Diseño y experiencia de usuario
+
+- Diseño basado en tarjetas con alturas consistentes
+- Botones integrados visualmente dentro de cada producto
+- Jerarquía visual clara (título → descripción → precio → acción)
+- Ajustes responsive para evitar desbordes y problemas en móvil
+
+---
+
+##  Próximos pasos
 
 - Agregar imágenes reales de productos
-- Integrar logo oficial
-- Ajustar paleta de colores según branding final
+- Integrar el logo oficial de la marca
+- Ajustar la paleta de colores según el branding final
 - Añadir enlaces a redes sociales
 - Configurar correo de contacto
-- Evaluar dominio personalizado
+- Evaluar la compra de un dominio personalizado
 
 ---
 
-## 🌐 Sitio en línea
+##  Sitio en línea
 
-👉 https://alonso0099.github.io/esencias-del-alma/
-
----
-
-## 👤 Autor
-
-Proyecto desarrollado por **Alonso**  
-Frontend básico, estructura, responsive y publicación inicial.
+ https://alonso0099.github.io/esencias-del-alma/
 
 ---
 
-## ⚠️ Nota
+##  Autor
+
+Proyecto desarrollado por **Alonso**
+
+Responsabilidades:
+- Estructura frontend
+- Layout con CSS
+- Comportamiento responsive
+- Ajustes de UX
+- Publicación en GitHub Pages
+
+---
+
+##  Nota
 
 Este sitio no procesa pagos en línea.  
-Todos los pedidos se gestionan directamente vía WhatsApp.
+Todos los pedidos y consultas se gestionan directamente vía WhatsApp.
