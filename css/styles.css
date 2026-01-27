@@ -1,6 +1,9 @@
 /* =========================
    ESTILOS GENERALES
    ========================= */
+* {
+    box-sizing: border-box; /* El ancho incluye padding y bordes*/
+}
 
 body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -270,10 +273,17 @@ section:not(:last-child) {
 @media (max-width: 600px) {
     
     .whatsapp-float{
-        width: calc(100% - 40px);
-        text-align: center;
-        right: 20px;
-        left: 2px;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
     }
     .header__nav {
         display: flex;
@@ -307,5 +317,9 @@ section:not(:last-child) {
         .shop__price {
         font-size: 1.3rem;
     }
-
+        .shop__product .button {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
