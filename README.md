@@ -1,58 +1,69 @@
-# Esencias del Alma 
+# Esencias del Alma 🌿
 
 Website in development for **Esencias del Alma**, an artisanal fragrance brand focused on wellness, relaxation, and sensory experiences in Costa Rica.
 
-This project is designed as a **living prototype**, evolving over time based on feedback, content, and business needs.
+This project is built as a **living prototype**, intended to evolve iteratively based on real feedback, content updates, and business needs.
 
 ---
 
 ##  Project Status
 
-**Published and functional (initial version)**  
- Ongoing development
+ **Published and functional (initial version)**  
+ Actively evolving
 
-Current features:
+Current pages and features:
 - Home page
-- Product shop (orders via WhatsApp)
+- Product shop (orders handled via WhatsApp)
 - About page
 - Contact page
 - Privacy policy
-- Responsive design (desktop & mobile)
+- Fully responsive layout (desktop and mobile)
 
 ---
 
-##  Technologies Used
+##  Tech Stack
 
-- HTML5
-- CSS3 (Grid + Flexbox)
-- Git & GitHub
-- GitHub Pages (hosting)
+- **HTML5** for semantic structure
+- **CSS3** using Grid and Flexbox for layout
+- **Git & GitHub** for version control
+- **GitHub Pages** for deployment and hosting
 
-No frameworks or backend are used at this stage.
+No frameworks or backend services are used at this stage.  
+The focus is on clean structure, responsive design, and maintainability.
 
 ---
 
 ##  Core Functionality
 
-- Product showcase
-- Purchase buttons redirecting to **WhatsApp Business**
+- Product listing cards with consistent layout
+- Call-to-action buttons redirecting to **WhatsApp Business**
 - Floating WhatsApp contact button
-- Simple and clear navigation
+- Simple and accessible navigation
+- Mobile-first responsive behavior
+
+---
+
+##  Design & UX Considerations
+
+- Card-based layout with equal-height products
+- Buttons visually integrated within product cards
+- Clear visual hierarchy (title → description → price → action)
+- Responsive adjustments to prevent layout overflow on mobile devices
 
 ---
 
 ##  Planned Improvements
 
 - Add real product images
-- Integrate official logo
-- Finalize color palette based on branding
+- Integrate official branding and logo
+- Finalize color palette
 - Add social media links
 - Configure contact email
-- Evaluate custom domain
+- Evaluate custom domain setup
 
 ---
 
-##  Live Website
+##  Live Demo
 
  https://alonso0099.github.io/esencias-del-alma/
 
@@ -60,15 +71,21 @@ No frameworks or backend are used at this stage.
 
 ##  Author
 
-Developed by **Alonso**  
-Frontend structure, responsive layout, and initial deployment.
+Developed by **Alonso**
+
+Responsibilities:
+- Frontend structure
+- CSS layout and responsive behavior
+- UX adjustments
+- GitHub Pages deployment
 
 ---
 
 ##  Disclaimer
 
 This website does not process online payments.  
-All orders are handled directly via WhatsApp.
+All orders and inquiries are handled directly via WhatsApp.
+
 
 
 
