@@ -1,7 +1,23 @@
 /* =========================
+   PALETA DE COLORES
+   ========================= */
+   :root{
+    --color-bg-main:#F5F2EF;
+    --color-primary:#2F6F73;
+    --color-secondary:#8FBF6A;
+    --color-text-main:#3A2F2B;
+    --color-text-muted:#6B5A54;
+    --color-accent-soft:#CFE3C2;
+
+    /*MASCOTAS*/
+    --color-pets-accent:#7AC943;
+    --color-pets-secondary:#7EC8E3;
+   }
+/* =========================
    ESTILOS GENERALES
    ========================= */
-* {
+
+   * {
     box-sizing: border-box; /* El ancho incluye padding y bordes*/
 }
 
@@ -11,10 +27,11 @@ body {
     padding: 0;
     line-height: 1.7;
     color: #333;
+    background-color: var(--color-bg-main);
 }
-    h1, h2, h3 {
+h1, h2, h3 {
     font-family: 'Playfair Display', serif;
-    color: #3a2f2b;
+    color: var(--color-text-main);
 }
 h1 {
     font-size: 2.2rem;
@@ -26,13 +43,16 @@ h3{
    font-size: 1.2rem; 
 }
 
+p, li {
+  color: var(--color-text-muted);
+}
 
 /* =========================
    HEADER Y NAVEGACIÓN
    ========================= */
 
 .header {
-    background-color: #f5f2ef;
+    background-color: var(--color-bg-main);
     padding: 20px;
     text-align: center;
 }
@@ -40,6 +60,7 @@ h3{
 
 .header__logo{
     margin: 0;
+    
 }
 
 .header__nav{
@@ -67,7 +88,7 @@ h3{
 .header__logo {
     font-family: 'Playfair Display', serif;
     font-size: 2.4rem;
-    color: #3a2f2b;
+    color: var(--color-text-main);
     letter-spacing: 0.5px;
 }
 
@@ -75,13 +96,14 @@ h3{
     margin-top: 8px;
     margin-bottom: 0;
     font-size: 1rem;
-    color: #6b5a54;
+    color: var(--color-text-muted);
     font-family: 'Inter', sans-serif;
 }
 
 .header__link {
     font-family: 'Inter', sans-serif;
     font-size: 0.95rem;
+    color:var(--color-text-main);
 }
 
 /* =========================
@@ -116,7 +138,7 @@ section:not(:last-child) {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 20px;
-    background-color: #8c6a5d;
+    background-color: var(--color-primary);
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -125,7 +147,7 @@ section:not(:last-child) {
 }
 
 .button:hover {
-    background-color: #725348;
+    background-color: var(--color-secondary);
 }
 .button {
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -161,20 +183,12 @@ section:not(:last-child) {
     margin-bottom: 12px;
 }
 
-
-.shop__product {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 6px;
-    background-color: #fafafa;
-}
-
 .shop__price {
     margin-top: 8px;
     margin-bottom: 16px;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #3a2f2b;
+    color: var(--color-primary);
 }
 
 .shop__price::before {
@@ -189,6 +203,7 @@ section:not(:last-child) {
 .shop__button {
     margin-top: 10px;
     margin-left: 1px;
+   
 }
 .shop__product {
     border: 1px solid #ddd;
@@ -230,14 +245,13 @@ section:not(:last-child) {
    ========================= */
 
 .footer {
-    background-color: #eee;
+    background-color: var(--color-accent-soft);
     padding: 20px;
     text-align: center;
     font-size: 0.9rem;
-} 
-.footer {
     margin-top: 40px;
-}
+} 
+
 
 .footer__text {
     margin: 0;
@@ -271,20 +285,7 @@ section:not(:last-child) {
    ========================= */
 
 @media (max-width: 600px) {
-    
-    .whatsapp-float{
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25D366;
-      color: white;
-      padding: 14px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-    }
+
     .header__nav {
         display: flex;
         flex-direction: column;
