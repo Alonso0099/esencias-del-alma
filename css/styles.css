@@ -38,6 +38,7 @@ h1 {
 }
 h2  {
 font-size: 1.6rem;
+margin-bottom: 16px;
 }
 h3{
    font-size: 1.2rem; 
@@ -115,7 +116,7 @@ main {
 }
 
 section {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 section > h2 {
     margin-bottom: 12px;
