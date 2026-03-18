@@ -6,6 +6,7 @@
     <title>Tienda | Aromas artesanales en Costa Rica</title>
     <meta name="description" content="Compra aromas artesanales en Costa Rica. Fragancias para el hogar, automóvil, oficina y mascotas. Pedidos por WhatsApp.">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="script/main.js" defer></script>
 </head>
 <body>
 
@@ -19,147 +20,345 @@
     </nav>
 </header>
 
-<main>
-
-    <section>
-        <h2>Nuestra Tienda de Aromas Artesanales</h2>
-
-            <p>
-                Descubre nuestra selección de <strong>aromas artesanales</strong>
-                diseñados para mejorar el bienestar emocional en el hogar,
-                la oficina, el automóvil y espacios compartidos con mascotas.
+<main class="main">
+    <section class="hero">
+        <div class="hero__content">
+            <h2 class="hero__title">Fragancias artesanales para transformar tus espacios</h2>
+            <p class="hero__text">
+                Descubre una colección de fragancias artesanales creadas para aromatizar espacios, 
+                acompañar rutinas de bienestar y transformar ambientes cotidianos.
             </p>
+            <p class="hero__text">
+                En <strong>Esencias del Alma</strong> trabajamos aromas ambientales,
+                aceites corporales, sprays para mascotas y opciones personalizadas
+                según el gusto y la intención de cada persona.
+            </p>
+
+            <div class="hero__actions">
+                <a class="button" href="https://wa.me/50683772263" target="_blank">
+                    Cotizar por WhatsApp
+                </a>
+                <a class="button button--ghost" href="#personalizados">
+                    Crear aroma personalizado
+                </a>
+            </div>
+        </div>
     </section>
 
-
-    <section>
-        <h2>Más de 35 aromas disponibles</h2>
-        <p>Contamos con una amplia variedad de aromas artesanales, entre ellos:</p>
-
-        <ul class="aromas-list">
-            <li>Menta</li>
-            <li>Frescura de mango</li>
-            <li>Sandía mix</li>
-            <li>Kiwi & sandía</li>
-            <li>Uva mix</li>
-            <li>Fresh star</li>
-            <li>Sándalo</li>
-            <li>Maracuyá</li>
-            <li>Piña mix</li>
-            <li>Naranja & chocolate</li>
-            <li>Palo santo</li>
-            <li>Confitura</li>
-        </ul>
-
-        <p><strong>Y muchos más.</strong></p>
-    </section>
-<section>
-    <h2> Más comprados</h2>
-    <p>Te dejamos una lista corta con los aromas más solicitados por nuestros clientes</p>
-    
-</section>
-    <section class="shop">
-        <article class="shop__product">
-            <div class="shop__image" aria-hidden="true"></div>
-            <h3 class="shop__title">Aroma Lavanda Relajante</h3>
-            <p class="shop__description">Aceite esencial ideal para el hogar.</p>
-            <p class="shop__price">₡2.000</p>
-            <a class="button  shop__button" href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20adquirir%20el%20Aroma Lavanda" tagert="_blank">
-                Compra por WhatsApp
-            </a>
-        </article>
-        <article class="shop__product">
-            <div class="shop__image" aria-hidden="true"></div>
-            <h3 class="shop__title">Aroma Menta Fresca</h3>
-            <p class="shop__description">Aceite esencial ideal para el hogar.</p>
-            <p class="shop__price">₡2.000</p>
-            <a class="button  shop__button" href="https://wa.me/50683772263" target="_blank">
-                Compra por WhatsApp
-            </a>
-        </article>
-    </section>
-        <section class="shop">
-        <article class="shop__product">
-            <div class="shop__image" aria-hidden="true"></div>
-            <h3 class="shop__title">Aroma Mango Tropical</h3>
-            <p class="shop__description">Aceite esencial ideal para el hogar.</p>
-            <p class="shop__price">₡3.500</p>
-            <a class="button  shop__button" href="https://wa.me/50683772263" target="_blank">
-                Compra por WhatsApp
-            </a>
-        </article>
-        <article class="shop__product">
-            <div class="shop__image" aria-hidden="true"></div>
-            <h3 class="shop__title">Aroma Sandía Mix</h3>
-            <p class="shop__description">Aceite esencial ideal para el hogar.</p>
-            <p class="shop__price">₡3.500</p>
-            <a class="button  shop__button" href="https://wa.me/50683772263" target="_blank">
-                Compra por WhatsApp
-            </a>
-        </article>
-    </section>
-
-    <section>
-        <h2>Aromas personalizados</h2>
-        <p>
-            ¿Buscas algo único? En <strong>Esencias del Alma</strong> te creamos el
-            aroma a tu gusto, pensando en lo que deseas y en la emoción que quieres
-            transmitir.
+    <section class="section">
+        <h2 class="section__title">Explora por tipo de producto</h2>
+        <p class="section__subtitle">
+            Encuentra la opción ideal según cómo deseas utilizar el aroma.
         </p>
 
-        <a class="button" href="https://wa.me/50683772263" target="_blank">
-            Crear mi aroma por WhatsApp
+        <div class="grid grid--4">
+            <a class="card card--link shop-category-link" href="#ambientales">
+                <h3 class="card__title">Aromas Ambientales</h3>
+                <p class="card__text">
+                    Para difusores, quemadores, hogar, oficina y vehículo.
+                </p>
+            </a>
+
+            <a class="card card--link shop-category-link" href="#corporales">
+                <h3 class="card__title">Aceites corporales</h3>
+                <p class="card__text">
+                    Formulados aparte para masaje, cuerpo y cuidado personal.
+                </p>
+            </a>
+
+            <a class="card card--link shop-category-link" href="#mascotas">
+                <h3 class="card__title">Mascotas</h3>
+                <p class="card__text">
+                    Sprays aromáticos suaves para el entorno de tus peluditos.
+                </p>
+            </a>
+
+            <a class="card card--link shop-category-link" href="#personalizados">
+                <h3 class="card__title">Personalizados</h3>
+                <p class="card__text">
+                    Creamos aromas al gusto según tu espacio o intención.
+                </p>
+            </a>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section__title">Aromas destacados</h2>
+        <p class="section__subtitle">
+            Una selección representativa de los más solicitados.
+        </p>
+
+        <div class="shop">
+            <article class="shop__product">
+                <div class="shop__image" aria-hidden="true"></div>
+                <h3 class="shop__title">Lavanda</h3>
+                <p class="shop__description">
+                    Fragancia asociada a ambientes de calma, descanso y armonía.
+                </p>
+                <p class="shop__price">₡2.000</p>
+                <a class="button shop__button" href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20adquirir%20el%20aroma%20Lavanda" target="_blank">
+                    Comprar por WhatsApp
+                </a>
+            </article>
+
+            <article class="shop__product">
+                <div class="shop__image" aria-hidden="true"></div>
+                <h3 class="shop__title">Palo Santo</h3>
+                <p class="shop__description">
+                    Aroma cálido y envolvente para armonizar el entorno.
+                </p>
+                <p class="shop__price">₡2.500</p>
+                <a class="button shop__button" href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20adquirir%20el%20aroma%20Palo%20Santo" target="_blank">
+                    Comprar por WhatsApp
+                </a>
+            </article>
+
+            <article class="shop__product">
+                <div class="shop__image" aria-hidden="true"></div>
+                <h3 class="shop__title">Menta</h3>
+                <p class="shop__description">
+                    Sensación de frescura, limpieza y energía para el día a día.
+                </p>
+                <p class="shop__price">₡2.000</p>
+                <a class="button shop__button" href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20adquirir%20el%20aroma%20Menta" target="_blank">
+                    Comprar por WhatsApp
+                </a>
+            </article>
+
+            <article class="shop__product">
+                <div class="shop__image" aria-hidden="true"></div>
+                <h3 class="shop__title">Cítricos</h3>
+                <p class="shop__description">
+                    Fragancias vibrantes para espacios activos y frescos.
+                </p>
+                <p class="shop__price">₡2.500</p>
+                <a class="button shop__button" href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20adquirir%20el%20aroma%20Cítricos" target="_blank">
+                    Comprar por WhatsApp
+                </a>
+            </article>
+            
+            <article class="shop__product">
+                <div class="shop__image" aria-hidden="true"></div>
+                <h3 class="shop__title">Eucalipto</h3>
+                <p class="shop__description">
+                    Fragancia refrescante que aporta sensación de limpieza y claridad.
+                </p>
+                <p class="shop__price">₡2.000</p>
+                <a class="button shop__button" href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20adquirir%20el%20aroma%20Eucalipto" target="_blank">
+                    Comprar por WhatsApp
+                </a>
+            </article>
+                        <article class="shop__product">
+                <div class="shop__image" aria-hidden="true"></div>
+                <h3 class="shop__title">Frescura Limon</h3>
+                <p class="shop__description">
+                    Aroma cítrico ligero que transmite energía y frescura.
+                </p>
+                <p class="shop__price">₡2.000</p>
+                <a class="button shop__button" href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20adquirir%20el%20aroma%20Frescura%20Limon" target="_blank">
+                    Comprar por WhatsApp
+                </a>
+            </article>
+        </div>
+    </section>
+
+    <section id="ambientales" class="section">
+        <h2 class="section__title">Aromas ambientales</h2>
+        <p class="section__subtitle">
+            Diseñados para difusores, quemadores y aromatización de espacios
+            como hogar, oficina y vehículo.
+        </p>
+
+        <div class="grid grid--3">
+            <article class="card">
+                <h3 class="card__title">Refrescantes</h3>
+                <p class="card__text">
+                    Té Verde, Manzana Verde, Sandía & Kiwi, Sandía Mix y Mango Mix.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Cítricos</h3>
+                <p class="card__text">
+                    Frescura de Limón, Naranja y Canela, Maracuyá, Melón y Mora Fresca.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Relajantes</h3>
+                <p class="card__text">
+                    Palo Santo, Laurel, Eucalipto, Romero, Menta y Lavanda.
+                </p>
+            </article>
+        </div>
+
+        <p class="section__subtitle">
+            Contamos con más de 30 aromas disponibles 
+            en diferentes combinaciones y familias aromáticas.
+        </p>
+    </section>
+
+    <section id="corporales" class="section">
+        <h2 class="section__title">Aceites corporales</h2>
+        <p class="section__subtitle">
+            Elaborados con una formulación aparte para uso en cuerpo, masajes
+            y algunas rutinas de cuidado personal. 
+            Los aceites corporales se elaboran con una formulación distinta 
+            para el cuidado de la piel.
+        </p>
+
+        <div class="grid grid--4">
+            <article class="card">
+                <h3 class="card__title">Lavanda</h3>
+                <p class="card__text">
+                    Ideal para una experiencia más relajante y suave.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Menta</h3>
+                <p class="card__text">
+                    Sensación fresca para rutinas corporales revitalizantes.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Cítricos</h3>
+                <p class="card__text">
+                    Opción energética para cuidado personal y masajes.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Palo Santo</h3>
+                <p class="card__text">
+                    Una alternativa cálida y sensorial para momentos de bienestar.
+                </p>
+            </article>
+        </div>
+
+        <p class="section__subtitle">
+            Algunas opciones también pueden incorporarse en rutinas de cuidado capilar.
+            Consulta disponibilidad y recomendaciones por WhatsApp.
+        </p>
+    </section>
+
+    <section id="mascotas" class="section section--pets">
+        <h2 class="section__title">Sprays para mascotas 🐾</h2>
+        <p class="section__subtitle">
+            Fragancias suaves pensadas para el entorno de tus mascotas y para
+            acompañar espacios más agradables y frescos.
+        </p>
+
+        <div class="grid grid--4">
+            <article class="card">
+                <h3 class="card__title">Caribe</h3>
+                <p class="card__text">
+                    Aroma fresco y ligero para el ambiente de tus mascotas.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Neutralizador de olores</h3>
+                <p class="card__text">
+                    Ideal para acompañar espacios donde se busca más frescura.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Manzana</h3>
+                <p class="card__text">
+                    Fragancia suave y agradable para entornos cotidianos.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Algodón de Azúcar</h3>
+                <p class="card__text">
+                    Un toque dulce y amigable pensado para el entorno.
+                </p>
+            </article>
+        </div>
+
+        <a class="button" href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20conocer%20más%20sobre%20los%20sprays%20para%20mascotas" target="_blank">
+            Consultar línea mascotas
         </a>
     </section>
-    <section>
-        <p>
-            El bienestar también se respira.
-            Nuestros aromas están pensados para compartir momentos de calma con quienes
-            más amas y claro que los peluditos están incluidos 🐾
+
+    <section id="personalizados" class="cta">
+        <h2 class="cta__title">Creamos tu aroma ideal</h2>
+        <p class="cta__text">
+            Uno de nuestros mayores diferenciales es la posibilidad de crear
+            aromas personalizados según el gusto de la persona, el tipo de espacio
+            y la experiencia que desea transmitir.
         </p>
+        <p class="cta__text">
+            Ya sea para hogar, vehículo, oficina, un regalo especial o una idea
+            de negocio, podemos trabajar contigo una fragancia a tu medida.
+        </p>
+        <a class="button" href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20crear%20un%20aroma%20personalizado" target="_blank">
+            Crear aroma por WhatsApp
+        </a>
     </section>
-    <section class="section--pets">
-    <h2>Aromas para Mascotas 🐾</h2>
-    <p>
-        Línea de aromas especialmente pensados para el bienestar y el entorno
-        de tus mascotas, utilizando esencias suaves y seguras.
-    </p>
 
-    <div class="shop">
-        <article class="shop__product">
-            <div class="shop__image" aria-hidden="true"></div>
-            <h3 class="shop__title">Aroma Tranquilizante </h3>
-            <p class="shop__description">
-                Fragancia suave diseñada para crear un ambiente tranquilo
-                para tus mascotas.
-            </p>
-            <p class="shop__price">₡3.500</p>
-            <a class="button" href="https://wa.me/50683772263" target="_blank">
-                Compra por WhatsApp
-            </a>
-        </article>
-    </div>
-</section>
+    <section class="section">
+        <h2 class="section__title">¿Cómo usar nuestros aromas?</h2>
+        <div class="grid grid--4">
+            <article class="card">
+                <h3 class="card__title">Difusores</h3>
+                <p class="card__text">
+                    Perfectos para llenar el ambiente de forma suave y continua.
+                </p>
+            </article>
 
+            <article class="card">
+                <h3 class="card__title">Quemadores</h3>
+                <p class="card__text">
+                    Ideales para una experiencia aromática más intensa en espacios interiores.
+                </p>
+            </article>
 
+            <article class="card">
+                <h3 class="card__title">Masajes y cuerpo</h3>
+                <p class="card__text">
+                    Los aceites corporales están formulados aparte para este tipo de uso.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Entorno de mascotas</h3>
+                <p class="card__text">
+                    Sprays suaves diseñados para acompañar espacios compartidos con peluditos.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2 class="section__title">¿Sabías que...?</h2>
+        <div class="grid grid--3">
+            <article class="card">
+                <h3 class="card__title">Lavanda</h3>
+                <p class="card__text">
+                    Se asocia con ambientes de calma y descanso emocional.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Menta</h3>
+                <p class="card__text">
+                    Aporta una sensación de frescura y claridad en el entorno.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3 class="card__title">Palo Santo</h3>
+                <p class="card__text">
+                    Tradicionalmente se relaciona con armonía y una sensación cálida en el hogar.
+                </p>
+            </article>
+        </div>
+    </section>
 </main>
-
-    <footer class="footer">
-        <p class="footer__text">
-            © 2026 Esencias del Alma · Costa Rica · 
-            <a href="privacy.html">Aviso de Privacidad</a>
-        </p>
-
-    </footer>
-
-<a
-    href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20recibir%20más%20información"
-    class="whatsapp-float"
-    target="_blank"
-    aria-label="Contactar por WhatsApp"
->
-    WhatsApp
-</a>
-
 </body>
 </html>
