@@ -75,6 +75,28 @@ li {
 }
 
 /* =========================
+   SKIP LINK (ACCESIBILIDAD)
+   ========================= */
+.skip-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 20px;
+    font-weight: 600;
+    text-decoration: none;
+    z-index: 2000;
+    border-radius: 0 0 6px 0;
+    transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+}
+
+/* =========================
    HEADER Y NAVEGACIÓN
    ========================= */
 .header {
