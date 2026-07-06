@@ -4,10 +4,46 @@
   document.addEventListener("DOMContentLoaded", initPage);
 
   function initPage() {
+    initMobileMenu();
     initShopCategoryNav();
     initContactForm();
+    setFooterYear();
   }
 
+  // ---------- Menú hamburguesa (mobile) ----------
+  function initMobileMenu() {
+    const menuButton = document.getElementById("menu-toggle");
+    const menuPanel = document.getElementById("mobile-menu");
+
+    if (!menuButton || !menuPanel) {
+      return;
+    }
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      setMobileMenuOpen(menuButton, menuPanel, !isOpen);
+    });
+
+    menuPanel.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        setMobileMenuOpen(menuButton, menuPanel, false);
+      });
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setMobileMenuOpen(menuButton, menuPanel, false);
+      }
+    });
+  }
+
+  function setMobileMenuOpen(button, panel, shouldOpen) {
+    panel.classList.toggle("hidden", !shouldOpen);
+    panel.classList.toggle("flex", shouldOpen);
+    button.setAttribute("aria-expanded", String(shouldOpen));
+  }
+
+  // ---------- Categorías de la tienda (shop.html) ----------
   function initShopCategoryNav() {
     const categoryLinks = document.querySelectorAll(".shop-category-link");
 
@@ -29,26 +65,18 @@
     }
 
     setActiveCategoryLink(clickedLink, allLinks);
-    scrollToSection(targetSection);
+    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function setActiveCategoryLink(activeLink, allLinks) {
     allLinks.forEach((link) => {
-      link.classList.remove("shop-category-link--active");
+      link.classList.remove("ring-2", "ring-sage", "bg-sage/10");
     });
 
-    activeLink.classList.add("shop-category-link--active");
+    activeLink.classList.add("ring-2", "ring-sage", "bg-sage/10");
   }
 
-  function scrollToSection(section) {
-    section.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  }
-
-  // The contact form only exists on contact.html, so this quietly does
-  // nothing on every other page.
+  // ---------- Formulario de contacto (contact.html) ----------
   function initContactForm() {
     const form = document.getElementById("contact-form");
 
@@ -84,7 +112,6 @@
 
   function validateField(value, errorElementId, errorMessage) {
     const errorElement = document.getElementById(errorElementId);
-
     errorElement.textContent = value ? "" : errorMessage;
     return Boolean(value);
   }
@@ -97,5 +124,16 @@
   function showContactFormSuccess() {
     const successMessage = document.getElementById("contact-form-success");
     successMessage.hidden = false;
+  }
+
+  // ---------- Año dinámico en el footer ----------
+  function setFooterYear() {
+    const yearElement = document.getElementById("current-year");
+
+    if (!yearElement) {
+      return;
+    }
+
+    yearElement.textContent = new Date().getFullYear();
   }
 })();

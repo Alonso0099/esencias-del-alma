@@ -1,134 +1,224 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto | Esencias del Alma Costa Rica</title>
     <meta name="description" content="Contacto de Esencias del Alma en Costa Rica. Pedidos y consultas de aromas artesanales por WhatsApp.">
-    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cream: '#FAF5EF',
+                        sand: '#F0E4D3',
+                        sage: { DEFAULT: '#8A9A7E', dark: '#66755C' },
+                        terracotta: '#C68B62',
+                        gold: '#C9A66B',
+                        espresso: '#3B2E26',
+                        taupe: '#7A6A5D',
+                        error: '#B3261E'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+
     <script src="script/main.js" defer></script>
 </head>
+<body class="bg-cream font-sans text-espresso antialiased">
 
-<body>
-<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[60] focus:rounded-full focus:bg-espresso focus:text-cream focus:px-5 focus:py-3">
+    Saltar al contenido principal
+</a>
 
-<header class="header">
-    <h1 class="header__logo">Esencias del Alma</h1>
-    <nav class="header__nav">
-        <a class="header__link" href="index.html">Inicio</a>
-        <a class="header__link" href="about.html">Sobre Nosotros</a>
-        <a class="header__link" href="shop.html">Tienda</a>
-        <a class="header__link header__link--active" href="contact.html" aria-current="page">Contacto</a>
-    </nav>
+<header class="sticky top-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-espresso/10">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8">
+        <div class="flex items-center justify-between h-20">
+            <a href="index.html" class="font-serif text-2xl text-espresso tracking-wide">Esencias del Alma</a>
+
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-espresso/80" aria-label="Navegación principal">
+                <a href="index.html" class="hover:text-sage-dark transition-colors">Inicio</a>
+                <a href="about.html" class="hover:text-sage-dark transition-colors">Sobre Nosotros</a>
+                <a href="shop.html" class="hover:text-sage-dark transition-colors">Tienda</a>
+                <a href="contact.html" class="hover:text-sage-dark transition-colors" aria-current="page">Contacto</a>
+            </nav>
+
+            <a href="https://wa.me/50683772263" target="_blank"
+               class="hidden md:inline-flex items-center rounded-full bg-sage px-5 py-2.5 text-sm font-semibold text-white hover:bg-sage-dark transition-colors">
+                Hablar por WhatsApp
+            </a>
+
+            <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú de navegación"
+                    class="group md:hidden inline-flex flex-col justify-center gap-1.5 w-10 h-10">
+                <span class="block h-0.5 w-6 bg-espresso transition-transform duration-200 group-aria-expanded:translate-y-2 group-aria-expanded:rotate-45"></span>
+                <span class="block h-0.5 w-6 bg-espresso transition-opacity duration-200 group-aria-expanded:opacity-0"></span>
+                <span class="block h-0.5 w-6 bg-espresso transition-transform duration-200 group-aria-expanded:-translate-y-2 group-aria-expanded:-rotate-45"></span>
+            </button>
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden flex-col gap-1 pb-6 text-sm font-medium text-espresso/80" aria-label="Navegación móvil">
+            <a href="index.html" class="py-3 border-b border-espresso/10">Inicio</a>
+            <a href="about.html" class="py-3 border-b border-espresso/10">Sobre Nosotros</a>
+            <a href="shop.html" class="py-3 border-b border-espresso/10">Tienda</a>
+            <a href="contact.html" class="py-3 border-b border-espresso/10" aria-current="page">Contacto</a>
+            <a href="https://wa.me/50683772263" target="_blank" class="mt-3 inline-flex justify-center rounded-full bg-sage px-5 py-2.5 font-semibold text-white">
+                Hablar por WhatsApp
+            </a>
+        </nav>
+    </div>
 </header>
 
-<main class="main" id="main-content">
-    <section class="section">
-        <h2 class="section__title">Contáctanos</h2>
-        <p class="section__subtitle">
-            Escríbenos con tu consulta, tu pedido o tu idea de aroma personalizado.
-            Respondemos directamente por WhatsApp.
-        </p>
-    </section>
+<main id="main-content">
 
-    <section class="section">
-        <h2 class="section__title">Envíanos un mensaje</h2>
-        <p class="section__subtitle">
-            Completa el formulario y te contactaremos por WhatsApp con tu mensaje ya escrito.
-        </p>
-
-        <form class="contact-form" id="contact-form" novalidate>
-            <div class="contact-form__field">
-                <label class="contact-form__label" for="contact-name">Nombre *</label>
-                <input
-                    class="contact-form__input"
-                    type="text"
-                    id="contact-name"
-                    name="name"
-                    autocomplete="name"
-                    required
-                >
-                <p class="contact-form__error" id="contact-name-error" role="alert"></p>
-            </div>
-
-            <div class="contact-form__field">
-                <label class="contact-form__label" for="contact-reason">Motivo de contacto *</label>
-                <select class="contact-form__select" id="contact-reason" name="reason" required>
-                    <option value="">Selecciona una opción</option>
-                    <option value="Consulta general">Consulta general</option>
-                    <option value="Pedido de un aroma">Pedido de un aroma</option>
-                    <option value="Aroma personalizado">Aroma personalizado</option>
-                    <option value="Otro">Otro</option>
-                </select>
-                <p class="contact-form__error" id="contact-reason-error" role="alert"></p>
-            </div>
-
-            <div class="contact-form__field">
-                <label class="contact-form__label" for="contact-message">Mensaje *</label>
-                <textarea
-                    class="contact-form__textarea"
-                    id="contact-message"
-                    name="message"
-                    rows="5"
-                    required
-                ></textarea>
-                <p class="contact-form__error" id="contact-message-error" role="alert"></p>
-            </div>
-
-            <button class="button contact-form__submit" type="submit">Enviar por WhatsApp</button>
-
-            <p class="contact-form__success" id="contact-form-success" role="status" hidden>
-                ¡Listo! Abrimos WhatsApp con tu mensaje ya escrito.
+    <section class="relative overflow-hidden">
+        <div class="absolute -top-20 -right-24 w-[380px] h-[380px] bg-gradient-to-br from-sage/25 to-terracotta/20 rounded-[45%_55%_60%_40%/50%_40%_60%_50%] blur-3xl" aria-hidden="true"></div>
+        <div class="relative mx-auto max-w-3xl px-5 sm:px-8 py-20 sm:py-24 text-center">
+            <p class="text-sm font-semibold tracking-[0.2em] uppercase text-terracotta mb-4">Contacto</p>
+            <h1 class="font-serif text-4xl sm:text-5xl leading-tight text-espresso mb-6">Contáctanos</h1>
+            <p class="text-lg text-taupe leading-relaxed">
+                Escríbenos con tu consulta, tu pedido o tu idea de aroma personalizado.
+                Respondemos directamente por WhatsApp.
             </p>
-        </form>
-    </section>
-
-    <section class="section">
-        <h2 class="section__title">Ubicación y horario</h2>
-
-        <div class="grid grid--3">
-            <article class="card">
-                <h3 class="card__title">Ubicación</h3>
-                <p class="card__text">Costa Rica</p>
-            </article>
-
-            <article class="card">
-                <h3 class="card__title">Horario de atención</h3>
-                <p class="card__text">
-                    Lunes a viernes: 8:00 a.m. – 4:00 p.m.<br>
-                    Sábado: 9:00 a.m. – 12:00 m.d.
-                </p>
-            </article>
-
-            <article class="card">
-                <h3 class="card__title">Contacto directo</h3>
-                <p class="card__text">
-                    ¿Prefieres escribirnos directamente?
-                </p>
-                <a class="button button--small" href="https://wa.me/50683772263" target="_blank">
-                    Hablar por WhatsApp
-                </a>
-            </article>
         </div>
     </section>
+
+    <!-- ================= FORMULARIO ================= -->
+    <section class="mx-auto max-w-3xl px-5 sm:px-8 pb-20 sm:pb-24">
+        <div class="rounded-3xl bg-white/60 border border-espresso/10 p-8 sm:p-10">
+            <h2 class="font-serif text-2xl text-espresso mb-2">Envíanos un mensaje</h2>
+            <p class="text-taupe mb-8">Completa el formulario y te contactaremos por WhatsApp con tu mensaje ya escrito.</p>
+
+            <form class="flex flex-col gap-6" id="contact-form" novalidate>
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-semibold text-espresso" for="contact-name">Nombre *</label>
+                    <input
+                        class="rounded-xl border border-espresso/15 bg-white px-4 py-3 text-espresso focus:outline-none focus:ring-2 focus:ring-sage"
+                        type="text"
+                        id="contact-name"
+                        name="name"
+                        autocomplete="name"
+                        required
+                    >
+                    <p class="text-sm text-error min-h-[1.2em]" id="contact-name-error" role="alert"></p>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-semibold text-espresso" for="contact-reason">Motivo de contacto *</label>
+                    <select class="rounded-xl border border-espresso/15 bg-white px-4 py-3 text-espresso focus:outline-none focus:ring-2 focus:ring-sage" id="contact-reason" name="reason" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="Consulta general">Consulta general</option>
+                        <option value="Pedido de un aroma">Pedido de un aroma</option>
+                        <option value="Aroma personalizado">Aroma personalizado</option>
+                        <option value="Otro">Otro</option>
+                    </select>
+                    <p class="text-sm text-error min-h-[1.2em]" id="contact-reason-error" role="alert"></p>
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label class="text-sm font-semibold text-espresso" for="contact-message">Mensaje *</label>
+                    <textarea
+                        class="rounded-xl border border-espresso/15 bg-white px-4 py-3 text-espresso focus:outline-none focus:ring-2 focus:ring-sage resize-y min-h-[120px]"
+                        id="contact-message"
+                        name="message"
+                        rows="5"
+                        required
+                    ></textarea>
+                    <p class="text-sm text-error min-h-[1.2em]" id="contact-message-error" role="alert"></p>
+                </div>
+
+                <button type="submit" class="self-start inline-flex items-center justify-center rounded-full bg-sage px-8 py-3.5 font-semibold text-white shadow-sm hover:bg-sage-dark transition-colors">
+                    Enviar por WhatsApp
+                </button>
+
+                <p class="rounded-xl bg-sage/15 text-sage-dark font-semibold px-5 py-3" id="contact-form-success" role="status" hidden>
+                    ¡Listo! Abrimos WhatsApp con tu mensaje ya escrito.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ================= UBICACIÓN Y HORARIO ================= -->
+    <section class="bg-sand/40">
+        <div class="mx-auto max-w-6xl px-5 sm:px-8 py-16 sm:py-20">
+            <h2 class="font-serif text-3xl sm:text-4xl text-espresso mb-10">Ubicación y horario</h2>
+
+            <div class="grid sm:grid-cols-3 gap-6">
+                <article class="rounded-2xl bg-white/70 border border-espresso/10 p-8">
+                    <h3 class="font-serif text-lg text-espresso mb-2">Ubicación</h3>
+                    <p class="text-taupe leading-relaxed">Costa Rica</p>
+                </article>
+
+                <article class="rounded-2xl bg-white/70 border border-espresso/10 p-8">
+                    <h3 class="font-serif text-lg text-espresso mb-2">Horario de atención</h3>
+                    <p class="text-taupe leading-relaxed">
+                        Lunes a viernes: 8:00 a.m. – 4:00 p.m.<br>
+                        Sábado: 9:00 a.m. – 12:00 m.d.
+                    </p>
+                </article>
+
+                <article class="rounded-2xl bg-white/70 border border-espresso/10 p-8">
+                    <h3 class="font-serif text-lg text-espresso mb-2">Contacto directo</h3>
+                    <p class="text-taupe leading-relaxed mb-4">¿Prefieres escribirnos directamente?</p>
+                    <a href="https://wa.me/50683772263" target="_blank" class="inline-flex items-center justify-center rounded-full bg-sage px-6 py-2.5 font-semibold text-white hover:bg-sage-dark transition-colors">
+                        Hablar por WhatsApp
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
 </main>
 
+<footer class="bg-espresso text-cream/80">
+    <div class="mx-auto max-w-6xl px-5 sm:px-8 py-14 grid gap-10 sm:grid-cols-3">
+        <div>
+            <p class="font-serif text-2xl text-cream mb-3">Esencias del Alma</p>
+            <p class="text-sm leading-relaxed max-w-xs">
+                Aromas artesanales para el bienestar emocional, creados con intención en Costa Rica.
+            </p>
+        </div>
 
-    <footer class="footer">
-        <p class="footer__text">
-            © 2026 Esencias del Alma · Costa Rica · 
-            <a href="privacy.html">Aviso de Privacidad</a>
-        </p>
+        <nav class="flex flex-col gap-2 text-sm" aria-label="Enlaces del pie de página">
+            <a href="index.html" class="hover:text-cream transition-colors">Inicio</a>
+            <a href="about.html" class="hover:text-cream transition-colors">Sobre Nosotros</a>
+            <a href="shop.html" class="hover:text-cream transition-colors">Tienda</a>
+            <a href="contact.html" class="hover:text-cream transition-colors">Contacto</a>
+            <a href="privacy.html" class="hover:text-cream transition-colors">Aviso de Privacidad</a>
+        </nav>
 
-    </footer>
+        <div class="text-sm sm:text-right">
+            <a href="https://wa.me/50683772263" target="_blank" class="inline-flex items-center gap-2 hover:text-cream transition-colors font-medium">
+                Hablar por WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <div class="border-t border-cream/10 py-6 text-center text-xs text-cream/60">
+        © <span id="current-year"></span> Esencias del Alma · Costa Rica · Hecho con calma e intención.
+    </div>
+</footer>
 
 <a
     href="https://wa.me/50683772263?text=Hola,%20me%20gustaría%20recibir%20más%20información"
-    class="whatsapp-float"
     target="_blank"
     aria-label="Contactar por WhatsApp"
+    class="fixed bottom-5 right-5 z-50 inline-flex items-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-white shadow-lg hover:brightness-95 transition"
 >
-    WhatsApp
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true">
+        <path d="M12.04 2c-5.52 0-10 4.48-10 10 0 1.77.46 3.45 1.27 4.9L2 22l5.25-1.28A9.96 9.96 0 0 0 12.04 22c5.52 0 10-4.48 10-10s-4.48-10-10-10Zm5.85 14.27c-.25.7-1.45 1.33-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.7-.63-2.99-1.29-4.94-4.3-5.09-4.5-.15-.2-1.22-1.62-1.22-3.09 0-1.47.77-2.19 1.05-2.49.27-.3.6-.37.8-.37h.57c.18 0 .43-.03.66.51.25.6.85 2.07.92 2.22.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.26 1.63 2.04 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.72.81 2.02.96.3.15.5.22.57.35.08.13.08.72-.17 1.42Z"/>
+    </svg>
+    <span class="hidden sm:inline text-sm font-medium">WhatsApp</span>
 </a>
 
 </body>
